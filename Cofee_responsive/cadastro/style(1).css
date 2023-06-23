@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@300&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
+}
+
+
+body {
+   
+   background-color: white;
+   overflow-x: hidden;
+   width: 100%;
+   justify-content: center;
+
+   /* margin:5% 15% ; */
+   align-items: center;
+   background: white;
+}
+
+
+.header-container {
+
+   padding: 0 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 80px;
+   left: 0;
+   padding: 40px;
+   position: fixed;
+   top: 0;
+   background-color: black;
+   z-index: 100;
+}
+
+
+/* Estilo para o elemento quando a página for rolada por 200px */
+.header-container.scrolled {
+      opacity: 0.5;
+      
+   }
+   
+
+
+
+.burguer {
+display: none;
+}
+
+.nav-bar ul {
+display: flex;
+padding-left: 20px;
+}
+
+
+
+.nav-bar ul li a {
+color: white;
+display: block;
+font-size: 1.2rem;
+padding: 10px 25px;
+border-radius: 20px;
+transition: 0.2s;
+margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+color: black;
+background-color: white;
+}
+
+.nav-bar ul li a.active {
+color: black;
+background-color: white;
+}
+
+
+
+.nav-bar ul li a {
+      transition: none;
+      color: white;
+      text-decoration: none;
+      }
+      
+      /* .nav-bar ul li a:visited {
+      color: rgb(255, 255, 255); /* Cor para links visitados 
+      }
+      */
+      .nav-bar ul li a.active {
+      color: black; /* Cor para link ativo */
+      }
+      body.overflow-visible{
+         overflow-y: visible;
+      }
+@media only screen and (max-width: 1320px) {
+      header {
+         padding: 0 50px;
+      }
+   
+
+}
+@media only screen and (max-width:1100px){
+      header {
+         padding: 0 30px;
+      }
+}
+@media only screen and (max-width:900px){
+      .header-container.scrolled {
+         opacity: 1;
+         
+      }
+      
+      .burguer{
+         display: block;
+         cursor: pointer;
+      }
+      .burguer .line {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 6px 0;
+      }
+      
+      .nav-bar{
+      
+      height: 0px;
+      position: absolute;
+      top: 80px;
+      left:0;
+      right:0 ;
+      width: 100vw;
+      background-color: black;
+      transition: 0.5s;
+      overflow:hidden ;
+      }
+      .nav-bar.active{
+      height: 450px;  
+      }
+      
+      .nav-bar.active ul{
+         opacity: 1;
+      }
+      .nav-bar ul{
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+      }
+      .nav-bar ul li a {
+         margin-bottom:12px ;
+         
+      }
+      
+      
+
+
+}
+
+
+
+
+/* menu---------------------------------------------------------  */
+
+
+.container{
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 40px;
+   width: 70%;
+   height: 60%;
+   display: flex;
+   margin-top: 10%;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.form-image{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #947240;
+   padding: 1rem;
+}
+
+.form-image img {
+   width: 31rem;
+}
+
+.form{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: #fff;
+   padding: 3rem;
+}
+
+.form-header{
+   margin-bottom: 3rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.login-button {
+   display: flex;
+   align-items: center;
+}
+
+.login-button button {
+   border: none;
+   background-color: #ecb041;
+   padding: 0.4rem 1rem;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.login-button button:hover {
+   background-color: #ecb041;
+}
+
+.login-button button a {
+   text-decoration: none;
+   font-weight: 500;
+   color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #ecb041;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 1rem 0;
+}
+
+.input-box {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1.1rem;
+}
+
+.input-box input {
+   margin: 0.6rem 0;
+   padding: 0.5rem 0.2rem;
+   border: none;
+   border-radius: 10px;
+   box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover {
+   background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+   outline: 1px solid #ecb041;
+}
+
+.input-box label,
+.gender-title h6 {
+   font-size: 0.97rem;
+   font-weight: 600;
+   color: #000000c0;
+}
+
+.input-box input::placeholder {
+   color: #000000be;
+ 
+}
+
+
+
+.gender-group {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 0.62rem;
+   padding: 0 0.5rem;
+}
+
+.gender-input {
+   display: flex;
+   align-items: center;
+}
+
+.gender-input input {
+   margin-right: 0.35rem;
+}
+
+.gender-input label {
+   font-size: 0.81rem;
+   font-weight: 600;
+   color: #000000c0;
+}
+
+.continue-button button {
+   width: 100%;
+   margin-top: 2.5rem;
+   border: none;
+   background-color: #644203;
+   padding: 0.72rem;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.continue-button button:hover {
+   background-color: #a87008;
+}
+
+.continue-button button a {
+   text-decoration: none;
+   font-size: 0.93rem;
+   font-weight: 500;
+   color: #fff;
+}
+
+@media screen and (max-width:1647px){
+   .input-group{
+     overflow-y: scroll;
+    
+      max-height: 10rem;
+      
+      padding-right: 5rem;
+      margin-bottom: 20px;
+   }
+}
+
+@media screen and (max-width:1430px){
+   .container {
+      width:80%;
+ }
+ .form {
+      width: 100%;
+ }     
+}
+@media screen and (max-width: 1330px) {
+   .form-image {
+       display: none;
+   }
+   .container {
+        width:50%;
+   }
+   .form {
+        width: 100%;
+   }        
+}
+
+@media screen and (max-width: 1064px){
+    .container {
+       width: 70%;
+       height: auto;
+    }
+    .form{
+      margin-right: auto;
+    }
+    .input-group{
+       flex-direction: column;
+       overflow-y: scroll;
+       flex-wrap: nowrap;
+       max-height: 10rem;
+       padding-right: 5rem;
+       margin-bottom: 20px;
+    }
+
+    .gender-input {
+       margin-top: 2rem;
+    }
+    .gender-group {
+       flex-direction: column;
+    }
+    .gender-input {
+       margin-top: 0.5rem;
+    }
+}
+/* footer------------------------------------------------------------------------- */
+
+footer{
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+
+   background-color: black;
+   
+
+   color: white;
+
+}
+#contato{
+   background-color: black;
+   max-width: 100%;
+   height: 20vh;
+   margin: 0 auto 0 auto;
+   /* margin-left: 60px;
+   margin-right: 60px; */
+}
+.right{
+   
+   background-color: black;
+}
+ul{
+   list-style: none;
+}
+.bx{
+   font-size: 1.5rem;
+   padding: 10px;
+}.block-contato{
+   margin-bottom: 10px;
+   margin-top:70px ;
+   
+}
+.social i{
+   font-size: 1.9rem;
+}
+.social li{
+   margin-left:-9px;
+   
+}
+.social{
+   
+   display: flex;
+   column-gap:0.5rem;
+}
+.block-contato li p{
+   font-size: 1.1rem;
+}
+.block-contato li a{
+   font-size: 1.1rem;
+}
+.block-contato{
+   margin:20px;
+   width: 100%;
+   font-weight: 600;
+}
+.container-contato a{
+   color: rgb(179, 179, 179);
+   
+}
+.block-contato li{
+   line-height: 2rem;
+   
+}
+.block-contato {
+   max-width:400px ;
+   margin-top: 50px;
+ 
+
+}
+.block-contato h3{
+   font-family: 'Poppins', sans-serif;
+}
+
+.block-contato a:hover{
+color:#b68937;
+}
+/* .block-contato:nth-child(3){
+   margin-left: -60px;
+} */
+
+.container-contato{
+   display: flex;
+   background-color: black;
+   flex-wrap:nowrap;
+   gap: 2rem;
+  
+   
+}
+
+
+
+
+@media screen and (max-width:1320px) {
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(2,400px);
+       justify-content: center;
+       align-items: center;
+      
+   
+   }
+}
+
+
+
+@media screen and (max-width:810px){
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(1,300px);
+       justify-content: start;
+       align-items: center;
+      
+   
+   }
+}
+@media screen and (max-width:320px)
+{
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(1,auto);
+       justify-content: start;
+       align-items: center;
+      
+   
+   }
+}

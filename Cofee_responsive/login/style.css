@@ -1,0 +1,383 @@
+
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
+}
+
+
+body{
+   background-color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   overflow-x: hidden;
+}
+
+header {
+width: 100%;
+height: 100px;
+background-color: black;
+display: flex;
+align-items: center;
+padding: 0 100px;
+}
+
+.header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+      left: 0;
+      padding: 40px;
+      position: fixed;
+      top: 0;
+      background-color: black;
+      z-index: 100;
+}
+
+
+/* Estilo para o elemento quando a página for rolada por 200px */
+
+.burguer {
+   display: none;
+   }
+   
+   .nav-bar ul {
+   display: flex;
+   padding-left: 20px;
+   }
+   
+   
+   
+   .nav-bar ul li a {
+   color: white;
+   display: block;
+   font-size: 1.2rem;
+   padding: 10px 25px;
+   border-radius: 20px;
+   transition: 0.2s;
+   margin: 0 5px;
+   }
+   
+   .nav-bar ul li a:hover {
+   color: black;
+   background-color: white;
+   }
+   
+   .nav-bar ul li a.active {
+   color: black;
+   background-color: white;
+   }
+   
+   
+   
+   .nav-bar ul li a {
+       transition: none;
+       color: white;
+       text-decoration: none;
+       }
+       
+       /* .nav-bar ul li a:visited {
+       color: rgb(255, 255, 255); /* Cor para links visitados 
+       }
+       */
+       .nav-bar ul li a.active {
+       color: black; /* Cor para link ativo */
+       }
+       body.overflow-visible{
+           overflow-y: visible;
+       }
+   @media only screen and (max-width: 1320px) {
+       header {
+           padding: 0 50px;
+       }
+      
+   
+   }
+   @media only screen and (max-width:1100px){
+       header {
+           padding: 0 30px;
+       }
+   }
+   @media only screen and (max-width:900px){
+       .header-container.scrolled {
+           opacity: 1;
+           
+         }
+         
+       .burguer{
+           display: block;
+           cursor: pointer;
+       }
+       .burguer .line {
+       width: 30px;
+       height: 3px;
+       background-color: white;
+       margin: 6px 0;
+       }
+       
+       .nav-bar{
+       
+       height: 0px;
+       position: absolute;
+       top: 80px;
+       left:0;
+       right:0 ;
+       width: 100vw;
+       background-color: black;
+       transition: 0.5s;
+       overflow:hidden ;
+       }
+       .nav-bar.active{
+       height: 450px;  
+       }
+       
+       .nav-bar.active ul{
+           opacity: 1;
+       }
+       .nav-bar ul{
+       display: block;
+       width: fit-content;
+       margin: 80px auto 0 auto;
+       text-align: center;
+       transition: 0.5s;
+       opacity: 0;
+       }
+       .nav-bar ul li a {
+           margin-bottom:12px ;
+           
+       }
+       
+       
+   
+   
+   }
+
+/* fim do menu --------------------------------------------------------*/
+
+
+.area-login{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60vh;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+img{
+   border-radius: 10px;
+}
+.login{
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   background-color: #9e5112;
+   border-radius: 10px;
+   width: 580px;
+   height:400px;
+   padding: 35px;
+}
+
+.login form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.login input{
+   margin-top: 10px;
+   background-color: #000000dc;
+   padding-left: 10px;
+   color: #ffffff;
+   font-weight: 800px;
+   border: none;
+   height: 35px;
+   outline: none;
+   border-radius: 8px;
+}
+.login input::placeholder{
+   font-size: 1rem;
+   
+   
+}
+.login img{
+   width: 130px;
+   height: auto;
+}
+
+.login::placeholder{
+   color: #ffffff;
+   font-size: 14px;
+}
+
+form [type="submit"]{
+   display: block;
+   background-color: #381e09;
+   font-size: 15px;
+   text-transform: uppercase;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+p{
+   color:#ffffff;
+}
+
+a{
+   color: white;
+   text-decoration: none;
+   margin-left: 10px;
+   font-size: 1.2rem;
+}
+.area-login a:hover{
+   color:#ee9e08;
+}
+@media screen and (max-width:590px){
+   .area-login{
+      height: 100vh;
+      /* margin-top: -30%; */
+   }
+   .login{
+      
+      width: 80%;
+      height: 50%;
+   }
+}
+/* footer------------------------------------------------------------------------- */
+
+footer{
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+
+   background-color: black;
+   
+
+   color: white;
+
+}
+#contato{
+   background-color: black;
+   max-width: 100%;
+   height: 35vh;
+   margin: 0 auto 0 auto;
+   /* margin-left: 60px;
+   margin-right: 60px; */
+}
+.right{
+   
+   background-color: black;
+}
+ul{
+   list-style: none;
+}
+.bx{
+   font-size: 1.5rem;
+   padding: 10px;
+}.block-contato{
+   margin-bottom: 10px;
+   margin-top:70px ;
+   
+}
+.social i{
+   font-size: 1.9rem;
+}
+.social li{
+   margin-left:-9px;
+   
+}
+.social{
+   
+   display: flex;
+   column-gap:0.5rem;
+}
+.block-contato li p{
+   font-size: 1.1rem;
+}
+.block-contato li a{
+   font-size: 1.1rem;
+}
+.block-contato{
+   margin:20px;
+   width: 100%;
+   font-weight: 600;
+}
+.container-contato a{
+   color: rgb(179, 179, 179);
+   
+}
+.block-contato li{
+   line-height: 2rem;
+   
+}
+.block-contato {
+   max-width:400px ;
+   margin-top: 50px;
+ 
+
+}
+.block-contato h3{
+   font-family: 'Poppins', sans-serif;
+}
+
+.block-contato a:hover{
+color:#b68937;
+}
+/* .block-contato:nth-child(3){
+   margin-left: -60px;
+} */
+
+.container-contato{
+   display: flex;
+   background-color: black;
+   flex-wrap:nowrap;
+   gap: 2rem;
+  
+   
+}
+
+
+
+
+@media screen and (max-width:1320px) {
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(2,400px);
+       justify-content: center;
+       align-items: center;
+      
+   
+   }
+}
+
+
+
+@media screen and (max-width:810px){
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(1,300px);
+       justify-content: start;
+       align-items: center;
+      
+   
+   }
+}
+@media screen and (max-width:320px)
+{
+   .container-contato{
+       
+       display: grid;
+       grid-template-columns: repeat(1,auto);
+       justify-content: start;
+       align-items: center;
+      
+   
+   }
+}
